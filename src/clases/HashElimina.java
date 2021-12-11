@@ -1,7 +1,7 @@
 package clases;
 
 import static clases.Hash.buscaHash;
-
+ 
 public class HashElimina{
     public static int eliminaHash(Hash[] h, int m, int n) {
         int i = buscaHash(h, m, n);
