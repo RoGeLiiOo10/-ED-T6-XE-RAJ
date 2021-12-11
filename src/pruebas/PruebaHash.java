@@ -1,6 +1,7 @@
 package pruebas;
 
 import clases.Hash;
+import clases.HashElimina;
 
 public class PruebaHash{
     public static void main(String[] args) {
@@ -31,7 +32,7 @@ public class PruebaHash{
                         break;
                     case 3:
                         n = Integer.parseInt(javax.swing.JOptionPane.showInputDialog("Ingrese el número a ser eliminado de la tabla:"));
-                        i = Hash.eliminaHash(h, m, n);
+                        i = HashElimina.eliminaHash(h, m, n);
                         if (i == -1) {
                             javax.swing.JOptionPane.showMessageDialog(null, "Número no encontrado");
                         } else {
