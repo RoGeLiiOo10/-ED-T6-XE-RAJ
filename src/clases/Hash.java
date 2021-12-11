@@ -8,25 +8,6 @@ public class Hash{
         return ((n + 1) % m);
     }
 
-    public static void insertaHash(Hash[] h, int m, int n) {
-        boolean i = false;
-        int j = funcion(n, m);
-        do {
-            if (h[j].estado == 0 || h[j].estado == 1) {
-                h[j].dato = n;
-                h[j].estado = 2;
-                i = true;
-            } else {
-                j++;
-            }
-        } while (j < m && !i);
-        if (i) {
-            javax.swing.JOptionPane.showMessageDialog(null, "¡Elemento insertado con éxito!");
-        } else {
-            javax.swing.JOptionPane.showMessageDialog(null, "¡Tabla llena!");
-        }
-    }
-
     public static int buscaHash(Hash[] h, int m, int n) {
         int j = funcion(n, m);
         while (j < m) {
@@ -43,15 +24,5 @@ public class Hash{
             }
         }
         return -1;
-    }
-
-    public static int eliminaHash(Hash[] h, int m, int n) {
-        int i = buscaHash(h, m, n);
-        if (i == -1) {
-            return -1;
-        } else {
-            h[i].estado = 1;
-            return 1;
-        }
     }
 }
